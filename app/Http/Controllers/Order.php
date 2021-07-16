@@ -52,4 +52,27 @@ class Order extends Controller
         $checkout = DB::table('checkout')->get();
         return view('Checkout', ['checkout' => $checkout]);
     }
+
+    public function Confirm() {
+        return view('Confirm');
+    }
+
+    public function Confirm_simpan(Request $request) {
+        $this->validate($request, [
+            'file' => 'required|max:2048'
+        ]);
+
+        $file = $request->file('file');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'data_file';
+
+        if($file->move($tujuan_upload,$nama_file)) {
+            DB::table('tbl_konfirmasi')->insert([
+                'id_user' => Session::get('id_user'),
+                'id_checkout' => $request->id_token,
+                'bukti' => $nama_file
+            ]);
+            return redirect('/Confirm');
+        }
+    }
 }

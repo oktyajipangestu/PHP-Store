@@ -21,3 +21,5 @@ Route::post('/AddCart', 'Order@Order');
 Route::get('/Keranjang', 'Order@Keranjang');
 Route::get('/Checkout', 'Order@Checkout');
 Route::get('/Checkout_list', 'Order@Checkout_list');
+Route::get('/Confirm', 'Order@Confirm');
+Route::post('/Konfirm', 'Order@Confirm_simpan');
