@@ -6,18 +6,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Login | E-Shopper</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="/BahanStudy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/BahanStudy/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/BahanStudy/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/BahanStudy/css/price-range.css" rel="stylesheet">
+    <link href="/BahanStudy/css/animate.css" rel="stylesheet">
+	<link href="/BahanStudy/css/main.css" rel="stylesheet">
+	<link href="/BahanStudy/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="/BahanStudy/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -32,7 +32,7 @@
 				<div class="row">
 					<div class="col-md-4 clearfix">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.html"><img src="/BahanStudy/images/home/logo.png" alt="" /></a>
 						</div>
 						
 					</div>
@@ -84,13 +84,9 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
+						<form action="/Masuk" method="POST">
+                            <input type="email" placeholder="Masukkan Email" name="email" />
+							<input type="password" placeholder="Masukkan Password" name="password" />
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 					</div><!--/login form-->
@@ -101,10 +97,10 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
+						<form action="/Daftar" method="POST">
+							<input type="text" placeholder="Masukkan Nama" name="nama"/>
+							<input type="email" placeholder="Masukkan Email" name="email"/>
+							<input type="password" placeholder="Buat Password" name="password"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
@@ -126,41 +122,12 @@
 		</div>
 		
 	</footer><!--/Footer-->
-
-	
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-	<div class="modal-dialog">
-	  <form action="/AddCart" method="post">
-	  <!-- Modal content-->
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		  <h4 class="modal-title">Masukan Jumlah</h4>
-		</div>
-		<div class="modal-body">
-		  <input type="hidden" id="id_barang" class="id_barang" name="id_barang" value="3487">
-		  <div class="form-group">
-			<label for="exampleInputEmail1">Jumlah Beli</label>
-			<input type="text" class="form-control " id="jumlah" name="jumlah" placeholder="Jumlah Beli">
-		  </div>
-		</div>
-		<div class="modal-footer">
-		  <button type="submit" class="btn btn-default">Beli</button>
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		</div>
-	  </div>
-	</form>
-	</div>
-  </div>
-
- </div>
   
-    <script src="js/jquery.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/BahanStudy/js/jquery.js"></script>
+	<script src="/BahanStudy/js/price-range.js"></script>
+    <script src="/BahanStudy/js/jquery.scrollUp.min.js"></script>
+	<script src="/BahanStudy/js/bootstrap.min.js"></script>
+    <script src="/BahanStudy/js/jquery.prettyPhoto.js"></script>
+    <script src="/BahanStudy/js/main.js"></script>
 </body>
 </html>

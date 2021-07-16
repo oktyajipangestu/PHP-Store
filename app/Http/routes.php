@@ -13,3 +13,7 @@
 
 Route::get('/', 'Utama@index');
 Route::post('/pushData', 'Utama@store');
+Route::get('/login', 'Login@index');
+Route::post('/Daftar', 'Login@register');
+Route::post('/Masuk', 'Login@login');
+Route::get('/Keluar', 'Login@logout');
