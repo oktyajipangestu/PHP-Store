@@ -18,3 +18,6 @@ Route::post('/Daftar', 'Login@register');
 Route::post('/Masuk', 'Login@login');
 Route::get('/Keluar', 'Login@logout');
 Route::post('/AddCart', 'Order@Order');
+Route::get('/Keranjang', 'Order@Keranjang');
+Route::get('/Checkout', 'Order@Checkout');
+Route::get('/Checkout_list', 'Order@Checkout_list');

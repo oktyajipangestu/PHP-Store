@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 
 class Checkout extends Migration
 {
@@ -12,7 +13,11 @@ class Checkout extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_checkout', function (Blueprint $table) {
+            $table->string('id_checkout');
+            $table->string('id_user');
+            $table->float('total');
+        });
     }
 
     /**
